@@ -5,6 +5,8 @@ import Subscription from './subscription'
 
 import Blocks from './block'
 
+import Poll from './poll'
+
 const URL_HOME ='http://localhost:3004/home'
 
 class Home extends React.Component{
@@ -34,6 +36,7 @@ class Home extends React.Component{
                 <Feature slides={this.state.home.slider}/>
                 <Subscription/>
                 <Blocks blocks={this.state.home.blocks}/>
+                <Poll/>
             </div>
         )
     }

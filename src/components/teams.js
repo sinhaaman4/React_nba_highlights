@@ -14,7 +14,7 @@ const fadeAnimation={
     transitionLeaveTimeout:500
 }
 
-class Team extends React.Component{
+class Teams extends React.Component{
     constructor(props){
         super(props);
 
@@ -58,10 +58,10 @@ class Team extends React.Component{
             }
         }
 
-        renderList=({filtered})=>{
+        renderList({filtered}){
             return filtered.map((item)=>{
                 return(
-                    <Link to={'./teams/${item.name'} key={item.id} className="team_item">
+                    <Link to={`/teams/${item.name}`} key={item.id} className="team_item">
                         <img alt={item.name} src={`./images/teams/${item.logo}`}/>
                     </Link>
                 )
@@ -86,4 +86,4 @@ class Team extends React.Component{
     }
 }
 
-export default  Team;
+export default  Teams;
